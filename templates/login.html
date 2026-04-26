@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="card" style="max-width:400px; margin:auto;">
+    <h2 class="text-center mb-2">Login</h2>
+
+    {% with messages = get_flashed_messages() %}
+        {% for m in messages %}
+            <!-- Flash messages are shown prominently to communicate authentication errors -->
+            <p class="text-center" style="color:#e50914;">{{ m }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+
+        <button class="btn btn-primary">Login</button>
+        <a href="/" class="btn btn-secondary">Return Home</a>
+    </form>
+
+    <p class="text-center mt-2">
+        New? <a href="/register">Register</a>
+    </p>
+</div>
+
+{% endblock %}

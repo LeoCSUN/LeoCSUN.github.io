@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+{% if not hide_navbar %}
+<nav class="navbar">
+    <a href="/" class="logo">Popcorn Reviews</a>
+
+    <div class="search-container">
+        <input
+            type="text"
+            id="movieSearch"
+            placeholder="Search for a movie..."
+            autocomplete="off"
+        >
+        <div id="results" class="autocomplete-dropdown"></div>
+    </div>
+
+    <div class="nav-links">
+        {% if session.get('username') %}
+            <span class="muted">Hi, {{ session.username }}</span>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+    </div>
+</nav>
+{% endif %}
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="{{ url_for('static', filename='search.js') }}"></script>
+</body>
+</html>

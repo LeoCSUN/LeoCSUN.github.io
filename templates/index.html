@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-2">Trending Movies</h2>
+
+<div class="movie-grid">
+    {% for m in movies %}
+        <div class="movie-card">
+            <img
+                src="https://image.tmdb.org/t/p/w500{{ m.poster_path }}"
+                alt="{{ m.title }} poster"
+            >
+
+            <div class="movie-card-content">
+                <h3>{{ m.title }}</h3>
+                <p class="muted">Rating - {{ m.vote_average | round(1) }}</p>
+            </div>
+
+            <a href="/movie/{{ m.id }}" class="btn btn-primary">
+                Reviews
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
