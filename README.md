@@ -19,3 +19,14 @@ This is an API-first movie review website which retrieves and makes use of real-
 - Frontend: JS (Async/Fetch), CSS3 Grid/Flexbox.
 - Backend: Python (Flask), SQLAlchemy.
 - Integrations: TMDB REST API.
+
+## Screenshots
+<p>
+    <img src="https://github.com/user-attachments/assets/634c26ce-da99-4a83-bfed-39aabcc5e7d6" width="%49">
+    <img src="https://github.com/user-attachments/assets/43c4a182-6ab3-4418-930c-10c6b0fba47b" width="%49">
+</p>
+
+<p>
+    <img src="https://github.com/user-attachments/assets/725b9bac-17fc-4011-aa7e-a4e2b0762b11" width="%49">
+    <img src="https://github.com/user-attachments/assets/81c4db88-a1a8-4986-95c1-bff5f7c7c572" width="49%">
+</p>
